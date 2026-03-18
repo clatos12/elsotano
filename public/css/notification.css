@@ -1,0 +1,24 @@
+.notification {
+    visibility: hidden;
+    background-color: #89451eff; /* Color para indicar éxito */
+    color: white;
+    text-align: center;
+    padding: 10px 10px; /* Ajuste de padding para que no sea muy grande */
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    font-size: 17px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    max-width: 90%; /* Para limitar el ancho en pantallas pequeñas */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+}
+
+.notification.show {
+    visibility: visible;
+    opacity: 1;
+}

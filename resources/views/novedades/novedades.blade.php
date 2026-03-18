@@ -59,6 +59,9 @@
                                 <h5 class="project-name">{{ $producto->titulo }}</h5>
                                 <p class="project-category text-muted">
                                     {{ $producto->descripcion }}
+                                    <p class="fw-bold text-whithe">
+                                    ${{ number_format($producto->precio, 2) }}
+                                </p>
                                 </p>
 
                                 <form action="{{ route('carrito.agregar', $producto->id) }}" method="POST">

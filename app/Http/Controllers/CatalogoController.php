@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use Illuminate\Support\Facades\DB;
 
 class CatalogoController extends Controller
 {
@@ -70,21 +71,26 @@ class CatalogoController extends Controller
 
     return view('marketing.marketingRedes', compact('productos'));
 }
+
+
 public function novedades()
 {
-    // Obtener los últimos 6 productos marcados como novedades
-    $productos = Producto::where('categoria', 'novedades')
-                         ->where('estado', true)
-                         ->orderBy('created_at', 'desc')
-                         ->take(6)
-                         ->get();
+    $subquery = Producto::select('categoria', DB::raw('MAX(created_at) as max_fecha'))
+        ->where('estado', 1)
+        ->groupBy('categoria');
+
+    $productos = Producto::joinSub($subquery, 'ultimos', function ($join) {
+            $join->on('productos.categoria', '=', 'ultimos.categoria')
+                 ->on('productos.created_at', '=', 'ultimos.max_fecha');
+        })
+        ->limit(9)
+        ->get();
 
     return view('novedades.novedades', compact('productos'));
 }
 public function ofertas()
 {
     $productos = Producto::where('estado', 1)
-        ->where('categoria', 'ofertas')
         ->orderBy('created_at', 'desc')
         ->take(6)
         ->get();
@@ -95,8 +101,7 @@ public function ofertas()
 public function vendidos()
 {
     $productos = Producto::where('estado', 1)
-        ->where('categoria', 'vendidos')
-        ->orderBy('created_at', 'desc')
+        ->inRandomOrder()
         ->take(6)
         ->get();
 

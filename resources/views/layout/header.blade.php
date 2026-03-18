@@ -27,12 +27,10 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategorias">
                         <li><a class="dropdown-item" href="/categoria/literatura">Literatura</a></li>
-                        <li><a class="dropdown-item" href="/categoria/novela">Novela</a></li>
                         <li><a class="dropdown-item" href="/categoria/ciencia">Ciencia</a></li>
-                        <li><a class="dropdown-item" href="/categoria/tecnologia">Tecnología</a></li>
                         <li><a class="dropdown-item" href="/categoria/educacion">Educación</a></li>
                         <li><a class="dropdown-item" href="/categoria/autoayuda">Autoayuda</a></li>
-                        <li><a class="dropdown-item" href="/categoria/infantil">Infantil y Juvenil</a></li>
+                        <li><a class="dropdown-item" href="/categoria/infantil">Infantil </a></li>
                     </ul>
                 </li>
 

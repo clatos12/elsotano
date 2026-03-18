@@ -61,7 +61,7 @@
                                 @auth
                                     <form action="{{ route('carrito.agregar', $producto->id) }}" method="POST" class="mt-2">
                                         @csrf
-                                        <button type="submit" class="btn btn-light btn-sm">
+                                        <button type="submit" class="btn btn-sm btn-primary">
                                             Agregar al carrito
                                         </button>
                                     </form>

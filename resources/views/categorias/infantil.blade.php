@@ -1,56 +1,107 @@
 @extends('layout.layout')
 
-@section('title', 'Libros Infantiles')
+@section('title', 'Infantil - Librería Digital')
 
 @section('content')
-<div class="container my-5">
-    <h2 class="mb-4 text-center">Libros Infantiles</h2>
+<body id="infantil">
 
-    @if(isset($productos) && count($productos) > 0)
-        <div class="row">
-            @foreach($productos as $producto)
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100">
-                        @if(!empty($producto->fotografia))
-                            <img 
-                                src="{{ config('app.storage_url') . $producto->fotografia }}" 
-                                class="card-img-top" 
-                                alt="{{ $producto->titulo }}"
-                                style="height: 250px; object-fit: cover;"
-                            >
-                        @else
-                            <div class="text-center p-4 text-muted">
-                                Sin imagen
-                            </div>
-                        @endif
+    <!-- Header -->
+    <header class="mastheadFacebook" style="background-color: #f39c12;">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Libros Infantiles</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 mb-5">
+                        Descubre historias divertidas y educativas para los más pequeños.
+                        Fomenta la imaginación y el amor por la lectura desde temprana edad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">{{ $producto->titulo }}</h5>
-                            <p class="card-text fw-bold">
-                                ${{ number_format($producto->precio, 2) }}
-                            </p>
+    <!-- Título -->
+    <section class="page-section2">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">Catálogo Infantil</h2>
+            <p class="text-center text-muted">
+                Libros llenos de aventuras, aprendizaje y diversión.
+            </p>
+            <hr class="divider" />
+        </div>
+    </section>
 
-                            @auth
-                                <form action="{{ route('carrito.agregar', $producto->id) }}" method="POST" class="mt-auto">
-                                    @csrf
-                                    <button type="submit" class="btn btn-primary w-100">
-                                        Agregar al carrito
-                                    </button>
-                                </form>
+    <!-- Catálogo -->
+    <div id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+
+                @forelse ($productos as $producto)
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-box position-relative text-center p-3">
+
+                            @if(!empty($producto->fotografia))
+                                <img class="img-fluid2 rounded shadow mb-2"
+                                     src="{{ config('app.storage_url') . $producto->fotografia }}"
+                                     alt="{{ $producto->titulo }}"
+                                     loading="lazy">
                             @else
-                                <a href="{{ route('login') }}" class="btn btn-outline-secondary mt-auto w-100">
-                                    Inicia sesión para comprar
-                                </a>
-                            @endauth
+                                <span class="text-muted">Sin imagen disponible</span>
+                            @endif
+
+                            <div class="portfolio-box-caption">
+                                <h5 class="project-name">{{ $producto->titulo }}</h5>
+
+                                <p class="project-category text-muted">
+                                    {{ $producto->descripcion }}
+                                </p>
+
+                                <p class="fw-bold text-whithe">
+                                    ${{ number_format($producto->precio, 2) }}
+                                </p>
+
+                                {{-- Botón carrito --}}
+                                @auth
+                                    <form action="{{ route('carrito.agregar', $producto->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm btn-primary">
+                                            <i class="bi bi-cart-plus"></i> Agregar al carrito
+                                        </button>
+                                    </form>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary">
+                                        Inicia sesión para comprar
+                                    </a>
+                                @endauth
+                            </div>
+
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">No hay libros infantiles disponibles.</p>
+                    </div>
+                @endforelse
+
+            </div>
         </div>
-    @else
-        <div class="alert alert-info text-center">
-            No hay libros infantiles disponibles por el momento.
+    </div>
+
+    <!-- CTA -->
+    <section class="page-section bg-dark text-white">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mb-4">¡Haz que los niños amen leer!</h2>
+            <p class="mb-4">
+                Un buen libro puede despertar la imaginación y creatividad de los más pequeños.
+            </p>
+            <a class="btn btn-light btn-xl" href="/contacto">
+                Contáctanos
+            </a>
         </div>
-    @endif
-</div>
+    </section>
+
+</body>
 @endsection

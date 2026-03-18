@@ -145,6 +145,7 @@
                                 <h5 class="project-name">{{ $producto->titulo }}</h5>
                                 <p class="project-category text-muted">
                                     {{ $producto->descripcion }}
+                                    
                                 </p>
 
                                 {{-- Botón carrito --}}

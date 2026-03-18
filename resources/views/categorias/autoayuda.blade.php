@@ -57,7 +57,7 @@
                                 <p class="project-category text-muted">
                                     {{ $producto->descripcion }}
                                 </p>
-                                <p class="fw-bold text-primary">
+                                <p class="fw-bold text-whithe">
                                     ${{ number_format($producto->precio, 2) }}
                                 </p>
 

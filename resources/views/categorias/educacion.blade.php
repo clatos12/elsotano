@@ -57,7 +57,7 @@
                                 <p class="project-category text-muted">
                                     {{ $producto->descripcion }}
                                 </p>
-                                <p class="fw-bold text-success">
+                                <p class="fw-bold text-whithe">
                                     ${{ number_format($producto->precio, 2) }}
                                 </p>
 
@@ -65,7 +65,7 @@
                                 @auth
                                     <form action="{{ route('carrito.agregar', $producto->id) }}" method="POST">
                                         @csrf
-                                        <button type="submit" class="btn btn-sm btn-success">
+                                        <button type="submit" class="btn btn-sm btn-primary">
                                             <i class="bi bi-cart-plus"></i> Agregar al carrito
                                         </button>
                                     </form>

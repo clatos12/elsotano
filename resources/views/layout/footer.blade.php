@@ -7,7 +7,7 @@
             <div id="google_translate_element" class="d-flex justify-content-center mt-3"></div>
         </div> --}}
         <div class="small text-center text-muted mt-4">
-            Copyright &copy; <span id="currentYear"></span> - Photo & develoment
+            Copyright &copy; <span id="currentYear"></span> - ExaLogic
         </div>
     </div>
 </footer>

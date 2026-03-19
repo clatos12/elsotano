@@ -11326,6 +11326,493 @@ header.mastheadContacto h1, header.mastheadContacto .h1 {
       padding-bottom: 30px; /* Añade algo de espacio inferior */
   }
 }
+/* masthead de LITERATURA blade */
+header.mastheadLiteratura {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url('../img/fondos/literatura.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease; /* Transiciones para padding y margin */
+  
+}
+
+header.mastheadLiteratura h1, header.mastheadLiteratura .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadLiteratura {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadLiteratura p {
+    font-size: 1.15rem;
+  }
+  header.mastheadLiteratura h1, header.mastheadLiteratura .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadLiteratura h1, header.mastheadLiteratura .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadLiteratura {
+      height: 85vh;
+      min-height: 500px;
+      background-size: cover;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+}
+/* masthead de CIENCIA blade */
+header.mastheadCiencia {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url('../img/fondos/ciencia.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadCiencia h1,
+header.mastheadCiencia .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadCiencia {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadCiencia p {
+    font-size: 1.15rem;
+  }
+  header.mastheadCiencia h1,
+  header.mastheadCiencia .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadCiencia h1,
+  header.mastheadCiencia .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadCiencia {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* masthead de EDUCACIÓN blade */
+header.mastheadEducacion {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url('../img/fondos/educacion.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadEducacion h1,
+header.mastheadEducacion .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadEducacion {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadEducacion p {
+    font-size: 1.15rem;
+  }
+  header.mastheadEducacion h1,
+  header.mastheadEducacion .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadEducacion h1,
+  header.mastheadEducacion .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadEducacion {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* masthead de AUTOAYUDA blade */
+header.mastheadAutoayuda {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(108, 117, 125, 0.6) 0%,
+      rgba(108, 117, 125, 0.6) 100%
+    ),
+    url('../img/fondos/autoayuda.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadAutoayuda h1,
+header.mastheadAutoayuda .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadAutoayuda {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadAutoayuda p {
+    font-size: 1.15rem;
+  }
+  header.mastheadAutoayuda h1,
+  header.mastheadAutoayuda .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadAutoayuda h1,
+  header.mastheadAutoayuda .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadAutoayuda {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* masthead de INFANTIL blade */
+header.mastheadInfantil {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(108, 117, 125, 0.6) 0%,
+      rgba(108, 117, 125, 0.6) 100%
+    ),
+    url('../img/fondos/infantil.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadInfantil h1,
+header.mastheadInfantil .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadInfantil {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadInfantil p {
+    font-size: 1.15rem;
+  }
+  header.mastheadInfantil h1,
+  header.mastheadInfantil .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadInfantil h1,
+  header.mastheadInfantil .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadInfantil {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* masthead de NOVEDADES blade */
+header.mastheadNovedades {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(108, 117, 125, 0.6) 0%,
+      rgba(108, 117, 125, 0.6) 100%
+    ),
+    url('../img/fondos/novedades.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadNovedades h1,
+header.mastheadNovedades .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadNovedades {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadNovedades p {
+    font-size: 1.15rem;
+  }
+  header.mastheadNovedades h1,
+  header.mastheadNovedades .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadNovedades h1,
+  header.mastheadNovedades .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadNovedades {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* masthead de OFERTAS blade */
+header.mastheadOfertas {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(108, 117, 125, 0.6) 0%,
+      rgba(108, 117, 125, 0.6) 100%
+    ),
+    url('../img/fondos/ofertas.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadOfertas h1,
+header.mastheadOfertas .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadOfertas {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadOfertas p {
+    font-size: 1.15rem;
+  }
+  header.mastheadOfertas h1,
+  header.mastheadOfertas .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadOfertas h1,
+  header.mastheadOfertas .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadOfertas {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}/* masthead de OFERTAS blade */
+header.mastheadOfertas {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(108, 117, 125, 0.6) 0%,
+      rgba(108, 117, 125, 0.6) 100%
+    ),
+    url('../img/fondos/ofertas.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadOfertas h1,
+header.mastheadOfertas .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadOfertas {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadOfertas p {
+    font-size: 1.15rem;
+  }
+  header.mastheadOfertas h1,
+  header.mastheadOfertas .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadOfertas h1,
+  header.mastheadOfertas .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadOfertas {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+/* masthead de VENDIDOS blade */
+header.mastheadVendidos {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(
+      to bottom,
+      rgba(108, 117, 125, 0.6) 0%,
+      rgba(108, 117, 125, 0.6) 100%
+    ),
+    url('../img/fondos/vendidos.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+}
+
+header.mastheadVendidos h1,
+header.mastheadVendidos .h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+  header.mastheadVendidos {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
+  header.mastheadVendidos p {
+    font-size: 1.15rem;
+  }
+  header.mastheadVendidos h1,
+  header.mastheadVendidos .h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header.mastheadVendidos h1,
+  header.mastheadVendidos .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Ajuste del masthead en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+  .mastheadVendidos {
+    height: 85vh;
+    min-height: 500px;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 
 /* masthead del CAJAS Facebook blade */
 header.mastheadFacebook {

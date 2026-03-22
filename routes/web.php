@@ -6,6 +6,7 @@ use App\Http\Controllers\CajasCartonController;
 use App\Http\Controllers\CatalogoController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\PedidoController;
 
 // LISTAR productos
 Route::get('/productos', [ProductoController::class, 'index']);
@@ -46,6 +47,13 @@ Route::post('/carrito/agregar/{id}', [CarritoController::class, 'agregar'])->nam
 Route::get('/carrito', [CarritoController::class, 'ver'])->name('carrito.ver');
 Route::post('/carrito/eliminar/{id}', [CarritoController::class, 'eliminar'])->name('carrito.eliminar');
 Route::post('/carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carrito.vaciar');
+Route::post('/pedido/procesar', [PedidoController::class, 'procesar'])->name('pedido.procesar');
+Route::get('/pedido/ticket', [PedidoController::class, 'ticket'])
+    ->name('pedido.ticket');
+
+Route::get('/pedido/gracias', function () {
+    return view('pedido.gracias');
+})->name('pedido.gracias');
 
 //Ruta para contenido
 Route::get('/contenido-video', [CatalogoController::class, 'contenidoVideo'])->name('contenido.video');

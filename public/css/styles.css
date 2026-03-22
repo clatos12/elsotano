@@ -12694,4 +12694,23 @@ header.mastheadCerasESD h1, header.mastheadCerasESD .h1 {
 .btn-instagram:hover .instagram-icon {
   transform: scale(1.2); /* Hace que el ícono crezca al pasar el mouse */
 }
+.carrito-page {
+    margin-top: 100px;
+}
+/* NAVBAR NORMAL (NO HOME) */
+body.no-home #mainNav {
+    background-color: white !important;
+}
+
+body.no-home #mainNav .nav-link {
+    color: black !important;
+}
+
+body.no-home #mainNav .navbar-brand {
+    color: black !important;
+}
+
+body.no-home #mainNav .nav-link.active {
+    color: #0d6efd !important; /* azul bootstrap */
+}
 

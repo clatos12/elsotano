@@ -142,7 +142,7 @@
               <select name="pago" class="form-select" required id="metodoPago">
                   <option value="">Selecciona</option>
                   <option value="tarjeta">Tarjeta</option>
-                  <option value="deposito">Depósito</option>
+                  <option value="deposito">Depósito con referncia</option>
                   <option value="efectivo" disabled>Contra entrega</option>
               </select>
           </div>

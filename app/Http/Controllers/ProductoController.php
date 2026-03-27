@@ -23,12 +23,10 @@ class ProductoController extends Controller
         $order = $request->get('order', 'desc');
         $productos = $productos->orderBy('created_at', $order)->paginate(10);
 
-        // 👉 Si viene de Postman o API
         if ($request->wantsJson()) {
             return response()->json($productos);
         }
 
-        // 👉 Si viene del panel admin
         Session::put('page', 'productos.index');
         return view('productos.index', compact('productos'));
     }
@@ -47,6 +45,8 @@ class ProductoController extends Controller
             'fotografia' => 'nullable|file|image|max:5120',
             'categoria' => 'required|string|max:255',
             'precio' => 'required|numeric|min:0',
+            'cantidad' => 'required|integer|min:0', // ✅ NUEVO
+            'isbn' => 'nullable|string|max:20',     // ✅ NUEVO
             'estado' => 'required|boolean',
         ]);
 
@@ -60,8 +60,10 @@ class ProductoController extends Controller
             'fotografia' => $fotografiaPath,
             'categoria' => $validated['categoria'],
             'precio' => $validated['precio'],
+            'cantidad' => $validated['cantidad'], // ✅ NUEVO
+            'isbn' => $validated['isbn'],         // ✅ NUEVO
             'estado' => $validated['estado'],
-            'usuario_id' => auth()->id() ?? null, // 🔑 clave
+            'usuario_id' => auth()->id() ?? null,
         ]);
 
         if ($request->wantsJson()) {
@@ -100,6 +102,8 @@ class ProductoController extends Controller
             'fotografia' => 'nullable|image|max:5120',
             'categoria' => 'required|string|max:255',
             'precio' => 'required|numeric|min:0',
+            'cantidad' => 'required|integer|min:0', // ✅ NUEVO
+            'isbn' => 'nullable|string|max:20',     // ✅ NUEVO
             'estado' => 'required|boolean',
         ]);
 
@@ -112,8 +116,12 @@ class ProductoController extends Controller
         $producto->update($validated);
 
         return request()->wantsJson()
-            ? response()->json(['message' => 'Producto actualizado', 'producto' => $producto])
-            : redirect()->route('productos.index')->with('success', 'Producto actualizado');
+            ? response()->json([
+                'message' => 'Producto actualizado',
+                'producto' => $producto
+            ])
+            : redirect()->route('productos.index')
+                ->with('success', 'Producto actualizado');
     }
 
     public function toggleEstado($id)
@@ -134,7 +142,8 @@ class ProductoController extends Controller
 
         return request()->wantsJson()
             ? response()->json(['message' => 'Producto eliminado'])
-            : redirect()->route('productos.index')->with('success', 'Producto eliminado');
+            : redirect()->route('productos.index')
+                ->with('success', 'Producto eliminado');
     }
 
     public function imprimir($id)
